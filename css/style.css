@@ -1,0 +1,44 @@
+main {
+	height: calc(100vh - 64px);
+	background-image: url(../assets/home_banner.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+main > div {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 50px;
+}
+
+h1, h2, h3, h4, h5, h6, .card {
+	margin: 0;
+}
+
+.input-field {
+	margin-top: 20px;
+}
+
+.input-field .prefix ~ label {
+  margin-left: 32px;
+}
+
+.input-field > .switch > label {
+  margin-left: 42px;
+	color: black;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.form-submit {
+	overflow: hidden;
+	margin-top: 40px;
+}
+
+#home-main-form {
+	padding: 20px;
+	margin: 0 auto;
+	background: #dddddd;
+	border-radius: 10px;
+	width: 90%;
+}
