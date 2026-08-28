@@ -39,6 +39,20 @@
 						</div>
 
 						<div class="input-field col">
+							<div class="switch">
+								<i class="material-icons prefix">loop</i>
+								<label>
+									Once
+									<input type="checkbox" checked>
+									<span class="lever"></span>
+									Subscription
+								</label>
+							</div>
+						</div>
+
+						<div class="small-gap"></div>
+
+						<div class="input-field col">
 							<i class="material-icons prefix">date_range</i>
 							<select multiple>
 								<option value="" disabled selected>Choose delivery days</option>
@@ -53,15 +67,28 @@
 							<label>Delivery Days</label>
 						</div>
 
-						<div class="input-field col">
-							<div class="switch">
-								<i class="material-icons prefix">loop</i>
-								<label>
-									Once
-									<input type="checkbox" checked>
-									<span class="lever"></span>
-									Subscription
-								</label>
+						<div class="small-gap"></div>
+
+						<div>
+							<p>
+								<i class="material-icons small">shopping_cart</i>
+								<span style="margin-left: 10px;">Order Quantity</span>
+							</p>
+
+							<div class="row">
+								<div class="col m-3 s-6">
+									<div class="grid-item">
+										<div class="grid-icon" style="background-image: url('./assets/home_banner.jpg');"></div>
+										<div class="grid-details">
+											<div>Sharbati Atta Roti &bull; ₹20</div>
+											<div class="grid-qty-ctrl">
+												<button>-</button>
+												<div><input type="text" value="0" /></div>
+												<button>+</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -78,4 +105,5 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
   </body>
+
 </html>

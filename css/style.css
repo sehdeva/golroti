@@ -42,3 +42,38 @@ h1, h2, h3, h4, h5, h6, .card {
 	border-radius: 10px;
 	width: 90%;
 }
+
+.small-gap {
+	overflow: hidden;
+	margin: 10px 0;
+}
+
+.grid-item > div {
+	float: left;
+}
+
+.grid-icon {
+	margin-right: 10px;
+	height: 60px;
+	width: 60px;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.grid-qty-ctrl > * {
+	float: left;
+}
+.grid-qty-ctrl input, .grid-qty-ctrl input:focus {
+	width: 40px !important;
+	border: 0 !important;
+	text-align: center !important;
+}
+.grid-qty-ctrl button {
+	border-radius: 5px;
+	border: 0;
+	color: white;
+	background-color: red;
+	margin: 10px 0;
+	height: 24px;
+	width: 24px;
+}
