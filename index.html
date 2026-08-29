@@ -39,15 +39,12 @@
 						</div>
 
 						<div class="input-field col">
-							<div class="switch">
-								<i class="material-icons prefix">loop</i>
+							<p style="margin-left: 5px;">
 								<label>
-									Once
-									<input type="checkbox" checked>
-									<span class="lever"></span>
-									Subscription
+									<input id="form_sub" type="checkbox" class="filled-in" checked />
+									<span>Subscription Order</span>
 								</label>
-							</div>
+							</p>
 						</div>
 
 						<div class="small-gap"></div>
@@ -55,7 +52,6 @@
 						<div class="input-field col">
 							<i class="material-icons prefix">date_range</i>
 							<select multiple>
-								<option value="" disabled selected>Choose delivery days</option>
 								<option value="Monday">Monday</option>
 								<option value="Tuesday">Tuesday</option>
 								<option value="Wednesday">Wednesday</option>
@@ -70,37 +66,71 @@
 						<div class="small-gap"></div>
 
 						<div>
-							<p>
-								<i class="material-icons small">shopping_cart</i>
-								<span style="margin-left: 10px;">Order Quantity</span>
-							</p>
+							<div class="grid-item">
+								<div class="grid-title">
+									Sharbati Atta Roti &bull; ₹12
+								</div>
+								<div class="grid-qty-ctrl">
+									<button>-</button>
+									<span>0</span>
+									<button>+</button>
+								</div>
+							</div>
 
-							<div class="row">
-								<div class="col m-3 s-6">
-									<div class="grid-item">
-										<div class="grid-icon" style="background-image: url('./assets/home_banner.jpg');"></div>
-										<div class="grid-details">
-											<div>Sharbati Atta Roti &bull; ₹20</div>
-											<div class="grid-qty-ctrl">
-												<button>-</button>
-												<div><input type="text" value="0" /></div>
-												<button>+</button>
-											</div>
-										</div>
-									</div>
+							<div class="grid-item">
+								<div class="grid-title">
+									Sharbati Atta Paratha &bull; ₹25
+								</div>
+								<div class="grid-qty-ctrl">
+									<button>-</button>
+									<span>0</span>
+									<button>+</button>
+								</div>
+							</div>
+
+							<div class="grid-item">
+								<div class="grid-title">
+									Khapli Atta Roti &bull; ₹20
+								</div>
+								<div class="grid-qty-ctrl">
+									<button>-</button>
+									<span>0</span>
+									<button>+</button>
+								</div>
+							</div>
+
+							<div class="grid-item">
+								<div class="grid-title">
+									Khapli Atta Paratha &bull; ₹35
+								</div>
+								<div class="grid-qty-ctrl">
+									<button>-</button>
+									<span>0</span>
+									<button>+</button>
+								</div>
+							</div>
+
+							<div class="grid-item">
+								<div class="grid-title">
+									<b>Order Total</b>
+								</div>
+								<div class="grid-qty-ctrl">
+									<b>₹0</b>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-submit center-align">
-							<a class="waves-effect waves-light red darken-2 btn"><i class="material-icons right">send</i>proceed</a>
+							<a onclick="onSubmit()" class="waves-effect waves-light red darken-2 btn"><i class="material-icons right">send</i>proceed</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer>
+			&copy; 2026 - GolRoti
+		</footer>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>

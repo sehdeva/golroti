@@ -1,14 +1,7 @@
-main {
-	height: calc(100vh - 64px);
-	background-image: url(../assets/home_banner.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
 main > div {
 	height: 100%;
 	background-color: rgba(255, 255, 255, 0.6);
-	padding: 50px;
+	/* padding: 50px; */
 }
 
 h1, h2, h3, h4, h5, h6, .card {
@@ -40,7 +33,8 @@ h1, h2, h3, h4, h5, h6, .card {
 	margin: 0 auto;
 	background: #dddddd;
 	border-radius: 10px;
-	width: 90%;
+	width: 100%;
+	max-width: 400px;
 }
 
 .small-gap {
@@ -48,32 +42,70 @@ h1, h2, h3, h4, h5, h6, .card {
 	margin: 10px 0;
 }
 
-.grid-item > div {
-	float: left;
-}
-
-.grid-icon {
-	margin-right: 10px;
-	height: 60px;
-	width: 60px;
-	background-size: cover;
+.grid-item {
 	overflow: hidden;
+	margin-top: 10px;
+}
+.grid-title {
+	float: left;
+	padding-top: 2px;
 }
 
+.grid-qty-ctrl {
+	float: right;
+}
 .grid-qty-ctrl > * {
 	float: left;
 }
-.grid-qty-ctrl input, .grid-qty-ctrl input:focus {
+.grid-qty-ctrl span {
+	margin-top: 2px;
 	width: 40px !important;
-	border: 0 !important;
 	text-align: center !important;
 }
 .grid-qty-ctrl button {
 	border-radius: 5px;
 	border: 0;
 	color: white;
-	background-color: red;
-	margin: 10px 0;
+	background-color: #D32F2F;
 	height: 24px;
 	width: 24px;
+}
+
+footer {
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+
+/* label color */
+.input-field label {
+	color: #000 !important;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	color: #000 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #000 !important;
+	box-shadow: 0 1px 0 0 #000 !important;
+}
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #000 !important;
+	box-shadow: 0 1px 0 0 #000 !important;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid #000 !important;
+	box-shadow: 0 1px 0 0 #000 !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #000 !important;
+}
+
+[type="checkbox"].filled-in:checked+span:not(.lever):after {
+	border: 2px solid #000 !important;
+	background-color: #000 !important;
 }
