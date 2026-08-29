@@ -12,6 +12,10 @@
 			<nav>
 				<div class="nav-wrapper red darken-2">
 					<a href="javascript:void(0)" class="brand-logo">Gol Roti</a>
+					<ul id="nav-mobile" class="right">
+						<li><a href="tel:918882202779"><i class="material-icons">phone</i></a></li>
+						<li><a href="https://wa.me/918882202779"><img src="./assets/whatsapp-256.png"></a></li>
+					</ul>
 				</div>
 			</nav>
 		</header>
@@ -35,13 +39,13 @@
 						<div class="input-field col">
 							<i class="material-icons prefix">phone_android</i>
 							<input id="form_phone" type="text">
-							<label for="form_phone">Contact</label>
+							<label for="form_phone">Contact No</label>
 						</div>
 
 						<div class="input-field col">
 							<p style="margin-left: 5px;">
 								<label>
-									<input id="form_sub" type="checkbox" class="filled-in" checked />
+									<input id="form_sub" type="checkbox" class="filled-in" onchange="updateSub()" checked />
 									<span>Subscription Order</span>
 								</label>
 							</p>
@@ -49,16 +53,16 @@
 
 						<div class="small-gap"></div>
 
-						<div class="input-field col">
+						<div id="form_days_holder" class="input-field col">
 							<i class="material-icons prefix">date_range</i>
-							<select multiple>
-								<option value="Monday">Monday</option>
-								<option value="Tuesday">Tuesday</option>
-								<option value="Wednesday">Wednesday</option>
-								<option value="Thursday">Thursday</option>
-								<option value="Friday">Friday</option>
-								<option value="Saturday">Saturday</option>
-								<option value="Sunday">Sunday</option>
+							<select id="form_days" multiple>
+								<option value="Monday" selected>Monday</option>
+								<option value="Tuesday" selected>Tuesday</option>
+								<option value="Wednesday" selected>Wednesday</option>
+								<option value="Thursday" selected>Thursday</option>
+								<option value="Friday" selected>Friday</option>
+								<option value="Saturday" selected>Saturday</option>
+								<option value="Sunday" selected>Sunday</option>
 							</select>
 							<label>Delivery Days</label>
 						</div>
@@ -71,9 +75,9 @@
 									Sharbati Atta Roti &bull; ₹12
 								</div>
 								<div class="grid-qty-ctrl">
-									<button>-</button>
-									<span>0</span>
-									<button>+</button>
+									<button onclick="updateQty(this, -12)">-</button>
+									<span class="qty">0</span>
+									<button onclick="updateQty(this, 12)">+</button>
 								</div>
 							</div>
 
@@ -82,9 +86,9 @@
 									Sharbati Atta Paratha &bull; ₹25
 								</div>
 								<div class="grid-qty-ctrl">
-									<button>-</button>
-									<span>0</span>
-									<button>+</button>
+									<button onclick="updateQty(this, -25)">-</button>
+									<span class="qty">0</span>
+									<button onclick="updateQty(this, 25)">+</button>
 								</div>
 							</div>
 
@@ -93,9 +97,9 @@
 									Khapli Atta Roti &bull; ₹20
 								</div>
 								<div class="grid-qty-ctrl">
-									<button>-</button>
-									<span>0</span>
-									<button>+</button>
+									<button onclick="updateQty(this, -20)">-</button>
+									<span class="qty">0</span>
+									<button onclick="updateQty(this, 20)">+</button>
 								</div>
 							</div>
 
@@ -104,9 +108,9 @@
 									Khapli Atta Paratha &bull; ₹35
 								</div>
 								<div class="grid-qty-ctrl">
-									<button>-</button>
-									<span>0</span>
-									<button>+</button>
+									<button onclick="updateQty(this, -35)">-</button>
+									<span class="qty">0</span>
+									<button onclick="updateQty(this, 35)">+</button>
 								</div>
 							</div>
 
@@ -115,7 +119,7 @@
 									<b>Order Total</b>
 								</div>
 								<div class="grid-qty-ctrl">
-									<b>₹0</b>
+									<b id="orderTotal">₹0</b>
 								</div>
 							</div>
 						</div>

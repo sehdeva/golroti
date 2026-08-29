@@ -109,3 +109,16 @@ footer {
 	border: 2px solid #000 !important;
 	background-color: #000 !important;
 }
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 10px;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+nav img {
+	height: 24px;
+	margin-top: 14px;
+}
