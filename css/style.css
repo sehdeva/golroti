@@ -111,11 +111,11 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
-    nav .brand-logo {
-        left: 10px;
-        -webkit-transform: none;
-        transform: none;
-    }
+	nav .brand-logo {
+		left: 10px;
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 nav img {

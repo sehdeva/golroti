@@ -1,5 +1,10 @@
-var elems = document.querySelectorAll('select');
-var instances = M.FormSelect.init(elems, {});
+document.addEventListener('DOMContentLoaded', function() {
+	var elems = document.querySelectorAll('select');
+	M.FormSelect.init(elems, {});
+
+	elems = document.querySelectorAll('.timepicker');
+	M.Timepicker.init(elems, {});
+});
 
 
 function onSubmit() {
@@ -8,6 +13,7 @@ function onSubmit() {
 	const formContact = document.getElementById('form_phone').value.trim();
 	const formIsSubOrder = document.getElementById('form_sub').checked;
 	const formDays = document.getElementById('form_days');
+	const formTime = document.querySelector('input[name="form_time"]:checked').value;
 	const selectedDays = Array.from(formDays.options).filter(opt => opt.selected).map(opt => opt.value);
 	const totalAmt = Number(document.getElementById('orderTotal').innerText.replace('₹', ''));
 	
@@ -48,11 +54,12 @@ function onSubmit() {
     }
   });
 
-	let orderMessage = `\nI want to order ${eachQtyMessage}`;
+	let orderMessage = `\nI want to order ${eachQtyMessage}\nDelivery Time: ${formTime}`;
 	if (formIsSubOrder) orderMessage += `\nDelivery every ${selectedDays}`;
-	const messageForWhatsapp = `Hello\nI'm from ${formFlat},${formSociety}.\n${orderMessage}\n\nMy contact is ${formContact}.`;
+	const messageForWhatsapp = `Hello\nI'm from ${formFlat}, ${formSociety}.\n${orderMessage}\n\nMy contact is ${formContact}.`;
 	
-	window.location.href = `https://wa.me/918882202779?text=${encodeURIComponent(messageForWhatsapp)}`;
+	console.log(messageForWhatsapp);
+	// window.location.href = `https://wa.me/918882202779?text=${encodeURIComponent(messageForWhatsapp)}`;
 }
 
 function updateSub() {
