@@ -58,8 +58,8 @@ function onSubmit() {
 	if (formIsSubOrder) orderMessage += `\nDelivery every ${selectedDays}`;
 	const messageForWhatsapp = `Hello\nI'm from ${formFlat}, ${formSociety}.\n${orderMessage}\n\nMy contact is ${formContact}.`;
 	
-	console.log(messageForWhatsapp);
-	// window.location.href = `https://wa.me/918882202779?text=${encodeURIComponent(messageForWhatsapp)}`;
+	// console.log(messageForWhatsapp);
+	window.location.href = `https://wa.me/918882202779?text=${encodeURIComponent(messageForWhatsapp)}`;
 }
 
 function updateSub() {
